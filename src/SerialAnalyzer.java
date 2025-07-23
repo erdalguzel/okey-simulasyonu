@@ -7,9 +7,9 @@ public class SerialAnalyzer {
         // Renklere göre ayır ve seri oluşturmaya çalış
         Map<Integer, List<Integer>> coloredTiles = new HashMap<>();
 
-        for (int tas : oddTiles) {
-            int renk = Tile.getTileColor(tas);
-            coloredTiles.computeIfAbsent(renk, k -> new ArrayList<>()).add(Tile.getTileCount(tas));
+        for (int tile : oddTiles) {
+            int renk = Tile.getTileColor(tile);
+            coloredTiles.computeIfAbsent(renk, k -> new ArrayList<>()).add(Tile.getTileCount(tile));
         }
 
         int totalUsage = 0;
@@ -20,18 +20,18 @@ public class SerialAnalyzer {
 
             // Ardışık sayıları kontrol et
             for (int i = 0; i < colorTiles.size(); i++) {
-                int seriUzunlugu = 1;
+                int seriesLength = 1;
 
                 // Ardışık taşları say
                 while (i + 1 < colorTiles.size() &&
                         colorTiles.get(i + 1) == colorTiles.get(i) + 1) {
                     i++;
-                    seriUzunlugu++;
+                    seriesLength++;
                 }
 
-                if (seriUzunlugu >= 3) {
-                    totalUsage += seriUzunlugu;
-                } else if (seriUzunlugu == 2 && okeyToUse > 0) {
+                if (seriesLength >= 3) {
+                    totalUsage += seriesLength;
+                } else if (seriesLength == 2 && okeyToUse > 0) {
                     // 2'li seriyi okey ile 3'e tamamla
                     totalUsage += 3;
                     okeyToUse--;
