@@ -11,7 +11,6 @@ Bu proje, geleneksel Türk okey oyununun 4 kişilik simülasyonunu Java programl
 - [Oyun Kuralları](#-oyun-kuralları)
 - [Algoritma](#-algoritma)
 - [Örnek Çıktı](#-örnek-çıktı)
-- [Katkıda Bulunma](#-katkıda-bulunma)
 
 ## Özellikler
 
