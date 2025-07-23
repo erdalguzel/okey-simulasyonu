@@ -41,7 +41,7 @@ javac *.java
 
 3. Uygulamayı çalıştırın:
 ```bash
-java OkeyOyunu
+java Main
 ```
 
 ## Kullanım
@@ -54,7 +54,7 @@ Program çalıştırıldığında:
 5. En iyi el (bitmeye en yakın) ekranda gösterilir
 
 ```bash
-java OkeyOyunu
+java Main
 ```
 
 ## Proje Yapısı
